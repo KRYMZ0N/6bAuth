@@ -1,0 +1,5 @@
+name: 6b6tAuth
+version: '${project.version}'
+main: me.krymz0n.auth.Main
+authors: [ KRYMZ0N ]
+description: auth plugin for qbasty
