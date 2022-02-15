@@ -1,6 +1,8 @@
-package me.krymz0n.auth;
+package me.krymz0n.auth.listener;
 
 import com.google.common.base.CharMatcher;
+import me.krymz0n.auth.Main;
+import me.krymz0n.auth.util.Utils;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.event.EventHandler;
@@ -24,7 +26,7 @@ public class Chat implements Listener {
             new BukkitRunnable() {
                 @Override
                 public void run() {
-                    evt.getPlayer().kickPlayer(ChatColor.RED + "You can not use non-ascii characters in your message!");
+                    evt.getPlayer().kickPlayer(Utils.colors(plugin.getConfig().getString("NonAsciiKickMessage")));
                     cancel();
                 }
             }.runTask(plugin);
@@ -38,7 +40,7 @@ public class Chat implements Listener {
             boolean isAscii = CharMatcher.ascii().matchesAllOf(evt.getMessage());
 
             if (!isAscii) {
-                evt.getPlayer().kickPlayer(ChatColor.RED + "You can not use non-ascii characters in your Command!");
+                evt.getPlayer().kickPlayer(Utils.colors(plugin.getConfig().getString("NonAsciiKickMessageCommand")));
                 evt.setCancelled(true);
             }
         }
