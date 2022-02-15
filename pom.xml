@@ -62,6 +62,10 @@
             <id>sonatype</id>
             <url>https://oss.sonatype.org/content/groups/public/</url>
         </repository>
+        <repository>
+            <id>JDA</id>
+            <url>https://github.com/DV8FromTheWorld/JDA</url>
+        </repository>
     </repositories>
 
     <dependencies>
@@ -70,6 +74,11 @@
             <artifactId>paper-api</artifactId>
             <version>1.12.2-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>net.dv8tion</groupId>
+            <artifactId>JDA</artifactId>
+            <version>5.0.0-alpha.5</version>
         </dependency>
     </dependencies>
 </project>
