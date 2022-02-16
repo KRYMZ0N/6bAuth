@@ -32,7 +32,7 @@ public final class Main extends JavaPlugin implements Listener {
     }
 
     public void createJda() throws LoginException, InterruptedException {
-        jda = JDABuilder.createDefault("OTE0MzU3NDI0ODU1NTg4OTI0.YaL3tg.Gw1s-_RXp0FUrwLunpP8LmZs63I").addEventListeners(new MessageListener()).build();
+        jda = JDABuilder.createDefault(this.getConfig().getString("Token")).addEventListeners(new MessageListener()).build();
 
         jda.awaitReady();
     }

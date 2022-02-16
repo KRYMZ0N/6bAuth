@@ -13,8 +13,8 @@ public class MessageListener extends ListenerAdapter {
         Message msg = evt.getMessage();
         User user = evt.getAuthor();
 
-        if (msg.equals("-reset nick")) {
-            evt.getChannel().sendMessage("Okay");
+        if (msg.getContentRaw().startsWith("-reset")) {
+            evt.getChannel().sendMessage("Okay").queue();
         }
     }
 }
