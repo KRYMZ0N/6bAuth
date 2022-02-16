@@ -13,7 +13,7 @@ import javax.security.auth.login.LoginException;
 import java.util.Objects;
 
 public final class Main extends JavaPlugin implements Listener {
-    JDA jda;
+    public JDA jda;
 
     @Override
     public void onEnable()  {
@@ -32,7 +32,7 @@ public final class Main extends JavaPlugin implements Listener {
     }
 
     public void createJda() throws LoginException, InterruptedException {
-        jda = JDABuilder.createDefault(this.getConfig().getString("Token")).addEventListeners(new MessageListener()).build();
+        jda = JDABuilder.createDefault(this.getConfig().getString("BotToken")).addEventListeners(new MessageListener(this)).build();
 
         jda.awaitReady();
     }

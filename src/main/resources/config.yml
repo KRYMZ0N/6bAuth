@@ -4,3 +4,10 @@ DisableAsciiCommand: true
 
 NonAsciiKickMessageCommand: "&cYou cannot use ascii characters in commands"
 NonAsciiKickMessage: "&cYou cannot use ascii characters in messages"
+
+BotToken: ""
+
+Channel1Id: ""
+Channel2Id: ""
+
+
