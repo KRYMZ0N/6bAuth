@@ -43,7 +43,7 @@ public class MessageListener extends ListenerAdapter {
                     int occurrences = count(users, author);
 
                     if (occurrences <= 4) {
-
+//
                         new BukkitRunnable() {
                             @Override
                             public void run() {
